@@ -6,5 +6,6 @@ namespace CanvasApi.Client.Users
     public interface IUsersApi
     {
         Task<IUserProfile> GetProfile(long userId);
+        Task<IUserProfile> GetProfile (string sisUserId);
     }
 }
