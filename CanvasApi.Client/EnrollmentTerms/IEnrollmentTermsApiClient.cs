@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using CanvasApi.Client.Courses.Models;
 using CanvasApi.Client.EnrollmentTerms.Models;
 
 namespace CanvasApi.Client.EnrollmentTerms
@@ -37,7 +38,7 @@ namespace CanvasApi.Client.EnrollmentTerms
         /// </summary>
         /// <param name="accountId"></param>
         /// <returns></returns>
-        Task<IEnumerable<IEnrollmentTerm>> List(long accountId, Action<IEnrollmentTermListOptions> options = null);
+        Task<IEnumerable<IEnrollmentTerm>> List ( long accountId, Action<IEnrollmentTermListOptions> options = null);
 
         /// <summary>
         /// Update an existing enrollment term for the specified account.

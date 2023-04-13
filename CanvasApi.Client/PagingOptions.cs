@@ -13,9 +13,9 @@ namespace CanvasApi.Client
     public class PagingOptions
     {
 #if (DEBUG)
-        private const int defaultPageSize = 5;
+        private const int defaultPageSize = 100;
 #else
-        private const int defaultPageSize = 50;
+        private const int defaultPageSize = 100;
 #endif
 
         public int PageSize { get; set; }

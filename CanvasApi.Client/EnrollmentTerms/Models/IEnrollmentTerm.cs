@@ -13,10 +13,10 @@
         /// </summary>
         string SisTermId { get; }
 
-        /// <summary>
-        /// the unique identifier for the SIS import. This field is only included if the
-        /// user has permission to manage SIS information.
-        /// </summary>
+        ///// <summary>
+        ///// the unique identifier for the SIS import. This field is only included if the
+        ///// user has permission to manage SIS information.
+        ///// </summary>
         long? SisImportId { get; }
 
         /// <summary>

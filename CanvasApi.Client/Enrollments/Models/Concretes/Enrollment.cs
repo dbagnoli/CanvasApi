@@ -4,7 +4,7 @@ using CanvasApi.Client.Users.Models.Concretes;
 
 namespace CanvasApi.Client.Enrollments.Models.Concretes
 {
-    internal class Enrollment : IEnrollment
+    public class Enrollment : IEnrollment
     {
         public long Id { get; set; }
         public long CourseId { get; set; }

@@ -20,7 +20,7 @@ namespace CanvasApi.Client.Courses
         /// <param name="userId"></param>
         /// <param name="optionsFactory"></param>
         /// <returns></returns>
-        Task<IEnumerable<ICourse>> List(long userId, Action<IListOptionsBasic> optionsFactory);
+        Task<IEnumerable<ICourse>> List(long userId, Action<IListOptions> optionsFactory);
 
         /// <summary>
         /// Return progress information for the user and course

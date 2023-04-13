@@ -5,7 +5,7 @@ namespace CanvasApi.Client.Enrollments.Models
 {
     public interface IEnrollmentRequest
     {
-        EnrollmentTypes[] Type { get; set; }
+        string[] Type { get; set; }
         string[] Role { get; set; }
         EnrollmentState[] State { get; set; }
         EnrollmentInclude[] Include { get; set; }

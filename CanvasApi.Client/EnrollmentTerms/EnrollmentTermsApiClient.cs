@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 using CanvasApi.Client._Base;
+using CanvasApi.Client.Courses.Models;
+using CanvasApi.Client.Courses.Models.Concrete;
 using CanvasApi.Client.EnrollmentTerms.Models;
 using CanvasApi.Client.EnrollmentTerms.Models.Concretes;
 using CanvasApi.Client.Extentions;
@@ -26,12 +28,34 @@ namespace CanvasApi.Client.EnrollmentTerms
                 $"/api/v1/accounts/{accountId}/terms/{Id}"
                 );
 
-        public async Task<IEnumerable<IEnrollmentTerm>> List(long accountId, Action<IEnrollmentTermListOptions> options = null) =>
-            await this.ApiClient.PagableApiOperation<EnrollmentTerm, EnrollmentTermsListResult, IEnrollmentTermListOptions>(
-               HttpMethod.Get,
-               $"/api/v1/accounts/{accountId}/terms",
-               options.GetOptions<IEnrollmentTermListOptions, EnrollmentTermListOptions>(),
-               EnrollmentTermsListResult.ToArray);
+        public async Task<IEnumerable<IEnrollmentTerm>> List ( long accountId, Action<IEnrollmentTermListOptions> options = null ) { //, Action<IListOptions> optionsFactory ) {  // Action<IEnrollmentTermListOptions> options = null ) {
+            //var options = new ListOptions();
+            //optionsFactory?.Invoke(options);
+
+            var response = await this.ApiClient
+                .ApiOperation<EnrollmentTermsListResult, IEnrollmentTermListOptions>(HttpMethod.Get, $"/api/v1/accounts/{accountId}/terms", options.GetOptions<IEnrollmentTermListOptions, EnrollmentTermListOptions>());
+
+            return response.EnrollmentTerms;
+
+            //var response = await this.ApiClient.ApiOperation<EnrollmentTermsListResult>(
+            //    HttpMethod.Get,
+            //    $"/api/v1/accounts/{accountId}/terms"
+            //    );
+            //var response = await this.ApiClient.PagableApiOperation<EnrollmentTerm, EnrollmentTermsListResult>( //, IListOptions>( //EnrollmentTermsListResult, IEnrollmentTermListOptions>(
+            //   HttpMethod.Get,
+            //   $"/api/v1/accounts/{accountId}/terms",
+            //   options
+
+            //EnrollmentTermsListResult.ToArray
+            //options.GetOptions<IEnrollmentTermListOptions, EnrollmentTermListOptions>()
+
+            //options
+            //  );
+            //options.GetOptions<IEnrollmentTermListOptions, EnrollmentTermListOptions>(),
+            //EnrollmentTermsListResult.ToArray);
+
+            //return null;
+        }
 
         public async Task<IEnrollmentTerm> Retrieve(long accountId, long Id, Action<IEnrollmentTermRetrieveOptions> options = null) =>
             await this.ApiClient.ApiOperation<EnrollmentTerm, IEnrollmentTermRetrieveOptions>(
