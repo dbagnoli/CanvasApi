@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace CanvasApi.Client.Users.Models.Concrete
 {
-    internal class User : IUser
+    public class User : IUser
     {
         public long Id { get; set; }
         public string Name { get; set; }

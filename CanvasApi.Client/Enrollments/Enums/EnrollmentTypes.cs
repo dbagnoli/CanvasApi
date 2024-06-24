@@ -9,7 +9,8 @@ namespace CanvasApi.Client.Enrollments.Enums
         Student,
         TeacherAssistant,
         Observer,
-        Designer
+        Designer,
+        StudentEnrollment
     }
 }
 

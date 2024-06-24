@@ -2,13 +2,13 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <Authors>Bryan M Lenihan</Authors>
-    <Copyright>2021</Copyright>
+    <Authors>tiberhealth, Alexander Bourgois</Authors>
+    <Copyright>2023</Copyright>
     <PackageIconUrl>https://cdn.tiberhealth.com/assets/TiberLogoImage_1E384B_128Icon.png</PackageIconUrl>
-    <Owners>Tiber Health innovations, Inc.</Owners>
+    <Owners></Owners>
     <PackageProjectUrl>https://github.com/tiberhealth/CanvasApi</PackageProjectUrl>
     <Summary>.Net 5.0 wrapper for the Canvas LMS API</Summary>
-    <PackageTags>Canvas LMS Instructure Tiber Health tiberhealth</PackageTags>
+    <PackageTags>Canvas LMS Instructure</PackageTags>
     <Title>Canvas LMS API Wrapper</Title>
     <Description>.Net Wrapper for Canvas LMS API.</Description>
   </PropertyGroup>
@@ -20,9 +20,15 @@
     <LangVersion>9.0</LangVersion>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="Flurl" Version="3.0.6" />
+    <PackageReference Include="JetBrains.Annotations" Version="2022.1.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
+    <PackageReference Include="MimeKit" Version="3.3.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.1" />
+    <PackageReference Include="RestSharp" Version="108.0.1" />
+    <PackageReference Include="ServiceStack" Version="6.2.0" />
+    <PackageReference Include="ServiceStack.Text" Version="6.2.0" />
     <PackageReference Include="TiberHealth.Serializer" Version="1.0.48" />
   </ItemGroup>
   <ItemGroup>

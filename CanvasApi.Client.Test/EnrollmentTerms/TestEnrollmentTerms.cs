@@ -14,7 +14,7 @@ namespace CanvasApi.Client.Test.EnrollmentTerms
         {
             // Test Values
             var termName = $"Test Term {Guid.NewGuid()}";
-            var startAt = DateTime.Now.Date.AddDays(-10);
+            var startAt = DateTime.Now.Date.AddDays(-10).AddMinutes(1);
             var endAt = startAt.AddDays(90);
             var sisTermId = Guid.NewGuid().ToString();
             var accountId = 1;

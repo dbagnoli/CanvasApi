@@ -2,7 +2,7 @@
 
 namespace CanvasApi.Client.EnrollmentTerms.Models.Concretes
 {
-    internal class EnrollmentTerm : IEnrollmentTerm
+    public class EnrollmentTerm : IEnrollmentTerm
     {
         public long Id { get; set; }
         public string Name { get; set; }

@@ -4,7 +4,8 @@ namespace CanvasApi.Client.Enrollments.Models.Concretes
 {
     public class EnrollmentRequest : IEnrollmentRequest
     {
-        public EnrollmentTypes[] Type { get; set; }
+        public int PerPage { get; set; }
+        public string[] Type { get; set; }
         public string[] Role { get; set; }
         public EnrollmentState[] State { get; set; }
         public EnrollmentInclude[] Include { get; set; }

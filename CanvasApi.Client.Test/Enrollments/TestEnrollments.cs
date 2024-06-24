@@ -16,7 +16,7 @@ namespace CanvasApi.Client.Test.Enrollments
             var api = services.GetRequiredService<ICanvasApiClient>();
 
             var results = await api.Enrollments.CourseEnrollments(1, options => {
-                options.Type = new [] { EnrollmentTypes.Student };
+                options.Type = new [] { EnrollmentTypes.Student.ToString() };
             });
 
             Assert.IsNotNull(results);

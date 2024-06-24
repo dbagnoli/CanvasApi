@@ -10,5 +10,10 @@ namespace CanvasApi.Client.Courses.Models
         [Obsolete("Deprecated"), Multipart("enrollment_role")] string EnrollmentRole { get; set; }
         long? EnrollmentRoleId { get; set; }
         bool? ExcludeBlueprintCourses { get; set; }
+        bool? Published { get; set; }
+        int? Per_Page { get; set; }
+        int? Page { get; set; }
+        [Multipart("enrollment_term_id")]
+        int? EnrollmentTermId { get; set; }
     }
 }

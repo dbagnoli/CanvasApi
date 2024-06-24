@@ -8,7 +8,7 @@ using Newtonsoft.Json.Linq;
 
 namespace CanvasApi.Client.Courses.Models.Concrete
 {
-    internal class Course : ICourse
+    public class Course : ICourse
     {
         public long Id { get; set; }
         public string SisCourseId { get; set; }

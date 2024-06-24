@@ -1,18 +1,20 @@
 ﻿using CanvasApi.Client.Accounts;
 using CanvasApi.Client.Admins;
 using CanvasApi.Client.AssignmentGroups;
+using CanvasApi.Client.Courses;
 using CanvasApi.Client.Enrollments;
 using CanvasApi.Client.EnrollmentTerms;
 using CanvasApi.Client.Modules;
 using CanvasApi.Client.OAuth2;
 using CanvasApi.Client.Pages;
+using CanvasApi.Client.Reports;
+using CanvasApi.Client.SisImports;
 using CanvasApi.Client.Submissions;
 using CanvasApi.Client.Users;
 
-namespace CanvasApi.Client
-{
-    public interface ICanvasApiClient
-    {
+namespace CanvasApi.Client {
+
+    public interface ICanvasApiClient {
         PagingOptions DefaultPagingOptions { get; }
 
         /// <summary>
@@ -29,6 +31,8 @@ namespace CanvasApi.Client
         /// API Calls for the Assignment Groups Sub System
         /// </summary>
         IAssignmentGroupsApiClient AssignmentGroups { get; }
+
+        ICourseApiClient Courses { get; }
 
         /// <summary>
         /// API Calls for the Enrollments subsystem in Canvas
@@ -48,6 +52,11 @@ namespace CanvasApi.Client
         /// <summary>
         /// API Calls for the Submissions subsystem in Canvas
         /// </summary>
+        ISisImportApiClient SisImports { get; }
+
+        /// <summary>
+        /// API Calls for the Submissions subsystem in Canvas
+        /// </summary>
         ISubmissionsApiClient Submissions { get; }
 
         /// <summary>
@@ -61,6 +70,11 @@ namespace CanvasApi.Client
         IUsersApi Users { get; }
 
         /// <summary>
+        /// API Calls for the Account Reports Sub System
+        /// </summary>
+        IReportApiClient Reports { get; }
+
+        /// <summary>
         /// API Calls for OAuth Authentication in Canvas
         /// </summary>
         IOAuth2Api OAuth2 { get; }
@@ -69,7 +83,6 @@ namespace CanvasApi.Client
         /// Validates the CanvasApi Client configuration
         /// </summary>
         /// <returns>Boolean indicating if the validation was successful or not</returns>
-        bool VerifyConfiguration();
-
+        bool VerifyConfiguration ();
     }
 }

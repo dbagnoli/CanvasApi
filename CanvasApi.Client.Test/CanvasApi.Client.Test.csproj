@@ -27,13 +27,12 @@
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="5.0.0" />
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\CanvasApi.Client\CanvasApi.Client.csproj" />
-  </ItemGroup>
   <ItemGroup>
     <Folder Include="Enrollments\" />
     <Folder Include="EnrollmentTerms\" />
     <Folder Include="HelpersTests\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CanvasApi.Client\CanvasApi.Client.csproj" />
   </ItemGroup>
 </Project>

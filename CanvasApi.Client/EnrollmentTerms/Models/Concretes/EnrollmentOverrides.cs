@@ -2,7 +2,7 @@
 
 namespace CanvasApi.Client.EnrollmentTerms.Models.Concretes
 {
-    internal class EnrollmentOverrides : IEnrollmentOverrides
+    public class EnrollmentOverrides : IEnrollmentOverrides
     {
         [JsonProperty("TeacherEnrollment")] public IEnrollmentOverrides Teacher{ get; set; }
         [JsonProperty("StudentEnrollment")] public IEnrollmentOverrides Student{ get; set; }
